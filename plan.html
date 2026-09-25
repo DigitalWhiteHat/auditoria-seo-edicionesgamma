@@ -52,9 +52,11 @@ body{ background:var(--paper); color:var(--text); font-family:var(--f-body); fon
 .nav a:focus-visible, a:focus-visible, button:focus-visible, summary:focus-visible{ outline:2px solid var(--terra); outline-offset:2px; }
 .cover{ background:var(--navy); color:var(--on-navy); padding-block:48px 40px; }
 .cover .kicker{ font-family:var(--f-display); font-weight:700; font-size:12.5px; letter-spacing:.16em; text-transform:uppercase; color:#F2A58E; margin:0; }
-.cover h1{ font-family:var(--f-display); font-weight:800; font-size:clamp(38px,6.6vw,74px); line-height:1.02; letter-spacing:-.02em; margin:10px 0 14px; color:#FFFFFF; text-wrap:balance; }
+.cover h1{ font-family:var(--f-display); font-weight:800; font-size:clamp(30px,6vw,64px); line-height:1.04; letter-spacing:-.02em; margin:10px 0 14px; color:#FFFFFF; text-wrap:balance; overflow-wrap:break-word; }
 .cover .dek{ font-size:18.5px; line-height:1.55; color:var(--on-navy-2); max-width:64ch; margin:0; }
-.cover-grid{ display:grid; grid-template-columns:minmax(0,1.25fr) minmax(0,1fr); gap:32px; align-items:end; }
+.cover-grid{ display:grid; gap:26px; }
+.cover-stats{ display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.1fr); gap:12px 48px; align-items:end; padding-top:22px; border-top:1px solid rgba(255,255,255,.18); }
+.cover-stats .meter{ width:100%; margin-top:0; }
 .cover .hero{ display:flex; align-items:baseline; flex-wrap:wrap; gap:10px 16px; }
 .cover .hero .now{ font-family:var(--f-display); font-weight:800; font-size:68px; line-height:1; }
 .cover .hero .arrow{ font-size:30px; color:#F2A58E; }
@@ -204,7 +206,7 @@ details.task .body dd{ margin:0; }
 .entregables li::before{ content:counter(e,decimal-leading-zero); font:700 22px var(--f-slab); color:var(--terra-ink); }
 .entregables strong{ font-family:var(--f-display); color:var(--ink); }
 @media (max-width:760px){
-  .cover-grid{ grid-template-columns:1fr; }
+  .cover-stats{ grid-template-columns:1fr; }
   .timeline, .cp{ grid-template-columns:1fr; }
   details.task summary{ grid-template-columns:40px minmax(0,1fr); }
   details.task .meta{ grid-column:1 / -1; justify-content:flex-start; }
@@ -243,7 +245,7 @@ details.task .body dd{ margin:0; }
 <section class="cover" aria-labelledby="titulo"><div class="wrap cover-grid">
   <div><p class="kicker">Plan de corrección · primera etapa · 28 sep – 16 oct 2026</p><h1 id="titulo">Plan priorizado para edicionesgamma.com</h1>
   <p class="dek">Qué se arregla primero, en qué orden y cómo se comprueba, para llevar la Salud del sitio de Semrush de 80 % a 92 % o más y dejar completos los datos estructurados.</p></div>
-  <div><div class="hero"><span class="now">44</span><span class="arrow" aria-hidden="true">·</span><span class="goal">14 días</span><small>Tareas y días hábiles · 44,5 horas estimadas · 3 mediciones en Semrush</small></div><svg class="chart meter" viewBox="0 0 560 78" role="img" aria-label="Salud del sitio 80 % frente al objetivo de 92 %">
+  <div class="cover-stats"><div class="hero"><span class="now">44</span><span class="arrow" aria-hidden="true">tareas ·</span><span class="goal">14 días</span><small>Días hábiles · 44,5 horas estimadas · 3 mediciones en Semrush</small></div><svg class="chart meter" viewBox="0 0 560 78" role="img" aria-label="Salud del sitio 80 % frente al objetivo de 92 %">
 <rect class="trk" x="4" y="30" width="552" height="14" rx="3"/><g class="fill"><path d="M4.0,30.0 h438.6 q3,0 3,3 v8 q0,3 -3,3 h-438.6 z" /></g>
 <line class="tgt" x1="511.8" x2="511.8" y1="26" y2="52" stroke-width="2"/>
 <text class="strong" x="4" y="20">80 % hoy</text><text x="556" y="20" text-anchor="end">Meta: 92 % (Top 10 % de Semrush)</text>
